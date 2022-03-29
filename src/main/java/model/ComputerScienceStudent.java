@@ -1,6 +1,6 @@
 package model;
 
-public class ComputerScienceStudent extends Students{
+public class ComputerScienceStudent extends Student {
 
     protected String programmingLanguage;
 

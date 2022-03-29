@@ -3,27 +3,27 @@ package model;
 import java.util.Arrays;
 
 public class StudentDB {
-    Students[] students;
+    Student[] students;
 
-    public StudentDB(Students[] students) {
+    public StudentDB(Student[] students) {
         this.students = students;
     }
 
-    public Students[] getAllStudents(){
+    public Student[] getAllStudents(){
         return students;
     }
 
-    public Students randomStudent(){
+    public Student randomStudent(){
         int index = (int) ((double) students.length * Math.random());
         return students[index];
     }
 
-    public void addStudent(Students newStudent){
+    public void addStudent(Student newStudent){
         students = Arrays.copyOf(students, students.length +1);
         students[students.length -1] = newStudent;
     }
 
-    public Students[] getStudents() {
+    public Student[] getStudents() {
         return students;
     }
 

@@ -1,6 +1,6 @@
 package model;
 
-public class ChemistryStudent extends Students{
+public class ChemistryStudent extends Student {
 
     protected String favouriteTask;
 
@@ -26,6 +26,14 @@ public class ChemistryStudent extends Students{
     @Override
     public int getID() {
         return 0;
+    }
+
+    public String getFavouriteTask() {
+        return favouriteTask;
+    }
+
+    public void setFavouriteTask(String favouriteTask) {
+        this.favouriteTask = favouriteTask;
     }
 
     @Override

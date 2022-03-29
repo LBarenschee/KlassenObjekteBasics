@@ -1,9 +1,3 @@
-import model.StudentDB;
-import model.Students;
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
-
 class StudentDBTest {
  /*   Students student1 = new Students("Klaus Klausen", 111);
     Students student2 = new Students("Jan Jansen", 222);

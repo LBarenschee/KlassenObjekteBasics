@@ -1,11 +1,11 @@
 package model;
 
-public abstract class Students {
+public abstract class Student {
 
     protected String name;
     protected int ID;
 
-    public Students(String name, int ID) {
+    public Student(String name, int ID) {
         this.name = name;
         this.ID = ID;
     }
@@ -27,7 +27,7 @@ public abstract class Students {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Students students = (Students) o;
+        Student students = (Student) o;
 
         if (ID != students.ID) return false;
         return name != null ? name.equals(students.name) : students.name == null;
