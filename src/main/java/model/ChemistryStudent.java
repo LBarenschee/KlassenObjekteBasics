@@ -1,6 +1,6 @@
 package model;
 
-public class ChemistryStudent extends Student {
+public class ChemistryStudent extends Student implements Citizen {
 
     protected String favouriteTask;
 
@@ -52,5 +52,15 @@ public class ChemistryStudent extends Student {
         int result = super.hashCode();
         result = 31 * result + (favouriteTask != null ? favouriteTask.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public String getAdress() {
+        return null;
+    }
+
+    @Override
+    public String getIdentityCardNumber() {
+        return null;
     }
 }

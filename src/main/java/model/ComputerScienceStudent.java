@@ -1,12 +1,16 @@
 package model;
 
-public class ComputerScienceStudent extends Student {
+public class ComputerScienceStudent extends Student implements Citizen {
 
     protected String programmingLanguage;
+    protected String address;
+    protected String idCardNumber;
 
-    public ComputerScienceStudent(String name, int ID, String programmingLanguage) {
+    public ComputerScienceStudent(String name, int ID, String programmingLanguage, String address, String idCardNumber) {
         super(name, ID);
         this.programmingLanguage = programmingLanguage;
+        this.address = address;
+        this.idCardNumber = idCardNumber;
     }
 
     @Override
@@ -20,12 +24,28 @@ public class ComputerScienceStudent extends Student {
 
     @Override
     public String getName() {
-        return null;
+        return super.name;
     }
 
     @Override
     public int getID() {
-        return 0;
+        return super.ID;
+    }
+
+    @Override
+    public String getAdress() {
+        return address;
+    }
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    @Override
+    public String getIdentityCardNumber() {
+        return idCardNumber;
+    }
+    public void setIdCardNumber(String idCardNumber) {
+        this.idCardNumber = idCardNumber;
     }
 
     @Override
@@ -45,4 +65,7 @@ public class ComputerScienceStudent extends Student {
         result = 31 * result + (programmingLanguage != null ? programmingLanguage.hashCode() : 0);
         return result;
     }
+
+
+
 }
